@@ -5,6 +5,11 @@ public class UserOrdinary implements User{
 	public UserOrdinary(String estimation){
 		this.estimation = estimation;
 	}
+
+	/**
+	 *   这里使用了双重分派机制
+	 * @param visitor
+	 */
 	@Override
 	public void accept(Visitor visitor) {
 		visitor.visit(this);

@@ -2,11 +2,16 @@ package com.anxpp.designpattern.memento;
 //自述历史备忘录
 public class MementoSelf {
 	public static void main(String[] args) {
-		OriginatorCaretaker originatorCaretaker = new OriginatorCaretaker();//发起人，同时为负责人
-		originatorCaretaker.changeState("stateOne");	//改变状态
-		IMemento memento = originatorCaretaker.createMemento();	//保存状态
-		originatorCaretaker.changeState("stateTwo");	//改变状态
-		originatorCaretaker.recoverMemento(memento);	//恢复状态
+		//发起人，同时为负责人
+		OriginatorCaretaker originatorCaretaker = new OriginatorCaretaker();
+		//改变状态
+		originatorCaretaker.changeState("stateOne");
+		//保存状态
+		IMemento memento = originatorCaretaker.createMemento();
+		//改变状态
+		originatorCaretaker.changeState("stateTwo");
+		//恢复状态
+		originatorCaretaker.recoverMemento(memento);
 	}
 }
 interface IMemento {}

@@ -40,7 +40,7 @@ class EP21 implements Headset{
 class EP30 implements Headset{
 	@Override
 	public void play() {
-		System.out.println("我是一台EP30");
+		System.out.println("我是一副EP30");
 	}
 }
 //抽象工厂

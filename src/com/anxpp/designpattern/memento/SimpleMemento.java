@@ -2,12 +2,18 @@ package com.anxpp.designpattern.memento;
 //简单的备忘录模式
 public class SimpleMemento {
 	public static void main(String[] args) throws Exception {
-		Originator originator = new Originator();	//发起人，要被保存的对象,也是他创建要保存的信息的
-		Caretaker caretaker = new Caretaker();		//辅助保存的对象
-		originator.setState("stateOne");	//设置状态
-		caretaker.saveMemento(originator.createMemento());		//保存状态
-		originator.setState("stateTwo");	//修改状态
-		originator.recoverMemento(caretaker.recoverMemento());	//恢复状态
+		//发起人，要被保存的对象,也是他创建要保存的信息的
+		Originator originator = new Originator();
+		//辅助保存的对象
+		Caretaker caretaker = new Caretaker();
+		//设置状态
+		originator.setState("stateOne");
+		//保存状态
+		caretaker.saveMemento(originator.createMemento());
+		//修改状态
+		originator.setState("stateTwo");
+		//恢复状态
+		originator.recoverMemento(caretaker.recoverMemento());
 	}
 }
 //发起人
