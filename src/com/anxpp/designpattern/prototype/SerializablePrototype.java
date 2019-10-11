@@ -1,15 +1,22 @@
 package com.anxpp.designpattern.prototype;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-//使用Serializable支持克隆
+/**
+ * @Author
+ * 使用Serializable支持克隆
+ */
 public class SerializablePrototype implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private int i;
-	private transient int notClone;//transient关键字的成员不会被序列化
+	/**
+	 * transient关键字的成员不会被序列化
+	 */
+	private transient int notClone;
 	public int getI() {
 		return i;
 	}
@@ -33,8 +40,9 @@ public class SerializablePrototype implements Serializable{
 	}
 	public SerializablePrototype ReadFromFile(String path) throws Exception{
 		File file = new File(path);
-		if(!file.exists())
+		if(!file.exists()){
 			file.createNewFile();
+		}
 		FileInputStream inStream = new FileInputStream(path);
 		ObjectInputStream objectOutputStream = new ObjectInputStream(inStream);  
 		Object o= objectOutputStream.readObject();  

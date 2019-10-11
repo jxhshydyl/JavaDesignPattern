@@ -1,5 +1,8 @@
 package com.anxpp.designpattern.builder;
-//具体生成器
+/**
+ * @Author
+ * 具体生成器
+ */
 public class DateBuilder1 implements IDateBuilder{
 	private MyDate myDate;
 	public DateBuilder1(MyDate myDate){

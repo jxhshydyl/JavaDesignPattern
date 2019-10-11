@@ -1,5 +1,8 @@
 package com.anxpp.designpattern.prototype;
-//使用 java 自带的支持
+/**
+ * @Author
+ * 使用 java 自带的支持
+ */
 public class APITestUse {
 	public static void main(String args[]) throws CloneNotSupportedException{
 		MyObject myObject = new MyObject();
@@ -10,6 +13,7 @@ public class APITestUse {
 }
 class MyObject implements Cloneable{
 	int i;
+	@Override
 	public Object clone() throws CloneNotSupportedException{
 		return super.clone();
 	}
