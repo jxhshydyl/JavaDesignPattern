@@ -4,10 +4,12 @@ public class Handler3 implements Handler {
 	private Handler next;
 	@Override
 	public int handleRequest(int n) {
-		if(n<=Integer.MAX_VALUE) return n;
-		else{
-			if(next==null)
+		if(10<n && n<=Integer.MAX_VALUE){
+			return n;
+		} else{
+			if(next==null){
 				throw new NullPointerException("next 不能为空");
+			}
 			return next.handleRequest(n);
 		}
 	}

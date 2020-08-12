@@ -1,4 +1,4 @@
-package com.anxpp.designpattern.Observer;
+package com.anxpp.designpattern.observer;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;

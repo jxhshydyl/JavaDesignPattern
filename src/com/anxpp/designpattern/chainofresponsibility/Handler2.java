@@ -4,7 +4,7 @@ public class Handler2 implements Handler {
 	private Handler next;
 	@Override
 	public int handleRequest(int n) {
-		if(n<10) return n*n;
+		if(0<n && n<10) return n*n;
 		else{
 			if(next==null)
 				throw new NullPointerException("next 不能为空");
